@@ -67,9 +67,6 @@ public class AdresseEinfuegen {
 		listeInteger.add(1, dasBuch.getHausNummer());
 		listeInteger.add(2, dasBuch.getTelefonnummer());
 		
-		System.out.println(listeString);
-		System.out.println(listeInteger);
-		
 		System.out.println();
 		
 		System.out.println("Name    \t:"+listeString.get(0)+" "+listeString.get(1));
