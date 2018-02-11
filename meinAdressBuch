@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class meinAdressBuch {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("------------");
+		System.out.println("-ADRESSBUCH-");
+		System.out.println("------------");
+		System.out.println("");
+		
+		wegweiser();
+		
+	}
+	
+	public static void wegweiser() {
+		while(true) {
+			Scanner wegweiser = new Scanner(System.in);
+			System.out.println("0 = Adresse einfügen");
+			System.out.println("1 = Ende");
+			byte soll = wegweiser.nextByte();
+			if(soll == 0) {
+				AdresseEinfuegen fuegen = new AdresseEinfuegen();
+				fuegen.adresseEinfuegen();
+			}
+			else if(soll == 1) {
+				ende();
+			}
+			else{
+				System.out.println("Falsche Eingabe");
+			}
+		}
+	}
+	
+	public static void ende() {
+		System.out.println("");
+		System.out.println("------------");
+		System.out.println("----ENDE----");
+		System.out.println("------------");
+		System.out.println("");
+		System.exit(0);
+	}
+}
