@@ -1,0 +1,40 @@
+------------
+-ADRESSBUCH-
+------------
+
+0 = Adresse einf?gen
+1 = Ende
+0
+Vorname: 
+Max    
+Nachname:
+Mustermann
+Strasse:
+Musterstrasse
+Stadt:
+Musterstadt
+Email:
+maxmusterfrau(at)mustermail.com 
+AdressZusatz:
+ 
+PLZ:
+12345
+Hausnummer:
+141
+Telefonnummer ohne Vorwahl
+11111111
+[Max, Mustermann, Musterstrasse, Musterstadt, maxmusterfrau(at)mustermail.com, ]
+[12345, 141, 11111111]
+
+Name    	:Max Mustermann
+Adresse 	:Musterstrasse 141 
+        	:12345 Musterstadt
+Telefon 	:11111111
+EMail   	:maxmusterfrau(at)mustermail.com
+0 = Adresse einf?gen
+1 = Ende
+1
+
+------------
+----ENDE----
+------------
