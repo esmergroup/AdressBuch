@@ -1,0 +1,81 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class AdresseEinfuegen {
+	
+	public void adresseEinfuegen() {
+		
+		Scanner eingabe1 = new Scanner(System.in);
+		System.out.println("Vorname: ");
+		String vorName = eingabe1.nextLine();
+		
+		Scanner eingabe2 = new Scanner(System.in);
+		System.out.println("Nachname:");
+		String nachName = eingabe2.nextLine();
+		
+		Scanner eingabe3 = new Scanner(System.in);
+		System.out.println("Strasse:");
+		String adresse = eingabe3.nextLine();
+		
+		Scanner eingabe4 = new Scanner(System.in);
+		System.out.println("Stadt:");
+		String stadt = eingabe4.nextLine();
+		
+		Scanner eingabe5 = new Scanner(System.in);
+		System.out.println("Email:");
+		String email = eingabe5.nextLine();
+		
+		Scanner eingabe6 = new Scanner(System.in);
+		System.out.println("AdressZusatz:");
+		String adresszusatz = eingabe6.nextLine();
+		
+		Scanner eingabe7 = new Scanner(System.in);
+		System.out.println("PLZ:");
+		int plz = eingabe7.nextInt();
+		
+		Scanner eingabe8 = new Scanner(System.in);
+		System.out.println("Hausnummer:");
+		int hausNummer = eingabe8.nextInt();
+		
+		Scanner eingabe10 = new Scanner(System.in);
+		System.out.println("Telefonnummer ohne Vorwahl");
+		int telnummer = eingabe10.nextInt();
+		
+		ArrayList<String> listeString = new ArrayList<String>();
+		ArrayList<Integer> listeInteger = new ArrayList<Integer>();
+		
+		AdressBuch dasBuch = new AdressBuch();
+		
+		dasBuch.setAdresse(adresse);
+		dasBuch.setVorName(vorName);
+		dasBuch.setNachName(nachName);
+		dasBuch.setPostLeitZahl(plz);
+		dasBuch.setHausNummer(hausNummer);
+		dasBuch.setTelefonnummer(telnummer);
+		dasBuch.setStadt(stadt);
+		dasBuch.setEmailAdresse(email);
+		dasBuch.setAdressZusatzt(adresszusatz);
+		
+		listeString.add(0, dasBuch.getVorName());
+		listeString.add(1, dasBuch.getNachName());
+		listeString.add(2, dasBuch.getAdresse());
+		listeString.add(3, dasBuch.getStadt());
+		listeString.add(4, dasBuch.getEmailAdresse());
+		listeString.add(5, dasBuch.getAdressZusatzt());
+		
+		listeInteger.add(0, dasBuch.getPostLeitZahl());
+		listeInteger.add(1, dasBuch.getHausNummer());
+		listeInteger.add(2, dasBuch.getTelefonnummer());
+		
+		System.out.println(listeString);
+		System.out.println(listeInteger);
+		
+		System.out.println();
+		
+		System.out.println("Name    \t:"+listeString.get(0)+" "+listeString.get(1));
+		System.out.println("Adresse \t:"+listeString.get(2)+" "+listeInteger.get(1)+" "+listeString.get(5));
+		System.out.println("        \t:"+listeInteger.get(0)+" "+listeString.get(3));
+		System.out.println("Telefon \t:"+listeInteger.get(2));
+		System.out.println("EMail   \t:"+listeString.get(4));
+	}
+}
